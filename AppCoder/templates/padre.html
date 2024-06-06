@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Landing Page - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="body">
+
+       {% include 'navbar.html' %}
+
+        <header class="header">
+            <div class="header-div">
+                <h1>Mi Proyecto</h1>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-div">
+                {% block contenidoQueCambia %}
+            
+                {% endblock contenidoQueCambia %}
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-div">
+                
+            </div>
+        </footer>
+
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>

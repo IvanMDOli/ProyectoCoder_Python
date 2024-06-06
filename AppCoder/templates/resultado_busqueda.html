@@ -1,0 +1,36 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+    <div>
+        {% if camada %}
+        <p>
+            Buscamos los cursos con la camada nro: {{camada}} 
+        </p>
+
+        <p>
+            {{curso}}
+        </p>
+        
+        {% elif profesor %}
+        <p>
+            Buscamos al profesor con el nombre: {{nombre}}
+        </p>
+
+        <p>
+            {{profesor.nombre}}
+        </p>
+        {% elif estudiante %}
+        <p>
+            Buscamos al estudiante con el nombre: {{nombre}}
+        </p>
+
+        <p>
+            {{estudiante.nombre}}
+        </p>
+        {% endif %}
+
+        
+    </div>
+{% endblock contenidoQueCambia %}
+    

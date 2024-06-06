@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+    <div>
+        <h1>Vista de estudiantes</h1>
+
+        <ul>
+            {% for estudiante in estudiantes %}
+                <li>
+                    {{estudiante.nombre}} {{estudiante.apellido}}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'EstudianteFormulario' %}">Crear Estudiante</a>
+        <a href="{% url 'BusquedaEstudiante' %}">Buscar Estudiante</a>
+    
+    </div>
+{% endblock contenidoQueCambia %}
+    
